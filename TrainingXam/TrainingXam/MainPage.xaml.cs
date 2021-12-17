@@ -13,6 +13,16 @@ namespace TrainingXam
         public MainPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasBackButton(this, false);
+        }
+
+        private void toBindingPageButton_Clicked(object sender, EventArgs e)
+        {
+            var bindingPage = new Binding();
+
+            Navigation.PushAsync(bindingPage);
         }
     }
 }
